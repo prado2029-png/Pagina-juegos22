@@ -17,6 +17,47 @@ function iniciarJuego() {
 
 
 // ===============================
+// MODO OSCURO / CLARO (GLOBAL)
+// ===============================
+
+// 1. Aplicar el modo guardado INMEDIATAMENTE al cargar el script
+const modoGuardado = localStorage.getItem("modo");
+
+if (modoGuardado === "claro") {
+    document.body.classList.add("modo-claro");
+} else {
+    document.body.classList.remove("modo-claro");
+}
+
+// 2. Configurar el botón cuando el HTML esté listo
+document.addEventListener("DOMContentLoaded", () => {
+    const modoBtn = document.getElementById("modoBtn");
+
+    if (modoBtn) {
+        // Ajustar el icono inicial según el modo cargado
+        if (document.body.classList.contains("modo-claro")) {
+            modoBtn.textContent = "🌙";
+        } else {
+            modoBtn.textContent = "☀️";
+        }
+
+        // Listener del botón para alternar modos
+        modoBtn.addEventListener("click", () => {
+            document.body.classList.toggle("modo-claro");
+
+            if (document.body.classList.contains("modo-claro")) {
+                modoBtn.textContent = "🌙";
+                localStorage.setItem("modo", "claro");
+            } else {
+                modoBtn.textContent = "☀️";
+                localStorage.setItem("modo", "oscuro");
+            }
+        });
+    }
+});
+
+
+// ===============================
 // ANIMACIÓN AL CARGAR
 // ===============================
 
@@ -126,37 +167,3 @@ document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
     });
 
 });
-// ===============================
-// MODO OSCURO / CLARO
-// ===============================
-
-const modoBtn = document.getElementById("modoBtn");
-
-if (modoBtn) {
-
-    const modoGuardado = localStorage.getItem("modo");
-
-    if (modoGuardado === "claro") {
-        document.body.classList.add("modo-claro");
-        modoBtn.textContent = "🌙";
-    }
-
-    modoBtn.addEventListener("click", () => {
-
-        document.body.classList.toggle("modo-claro");
-
-        if (document.body.classList.contains("modo-claro")) {
-
-            modoBtn.textContent = "🌙";
-            localStorage.setItem("modo", "claro");
-
-        } else {
-
-            modoBtn.textContent = "☀️";
-            localStorage.setItem("modo", "oscuro");
-
-        }
-
-    });
-
-}
