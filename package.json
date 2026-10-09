@@ -1,0 +1,24 @@
+{
+  "name": "pagina-juegos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prado2029-png/Pagina-Gamezone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/prado2029-png/Pagina-Gamezone/issues"
+  },
+  "homepage": "https://github.com/prado2029-png/Pagina-Gamezone#readme",
+  "devDependencies": {
+    "vercel": "^63.1.0"
+  }
+}

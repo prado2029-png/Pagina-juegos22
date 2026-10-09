@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone | Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        GAME<span>ZONE</span>
+    </a>
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="jquery.html">jQuery</a>
+        <a href="json.html">JSON</a>
+        <a href="hosting.html">Hosting</a>
+        <a href="dominios.html">Dominios</a>
+        <a href="cuestionario.html" class="activo">Quiz</a>
+        <a href="recursos.html">Recursos</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="pagina-header">
+
+    <p class="etiqueta">LEVEL UP</p>
+
+    <h1>
+        WEB <span>QUIZ</span> 🎮
+    </h1>
+
+    <p>
+        Pon a prueba lo que aprendistes sobre tecnologías web.
+    </p>
+
+</section>
+
+
+<section class="seccion">
+
+<form id="quiz">
+
+
+<!-- PREGUNTA 1 -->
+
+<div class="info-box">
+
+    <span class="numero">01</span>
+
+    <h2>¿Qué hace JavaScript?</h2>
+
+    <label>
+        <input type="radio" name="p1" value="a">
+        Crear solamente imágenes
+    </label>
+
+    <label>
+        <input type="radio" name="p1" value="b">
+        Agregar comportamiento e interacción
+    </label>
+
+    <label>
+        <input type="radio" name="p1" value="c">
+        Crear servidores físicos
+    </label>
+
+</div>
+
+
+<!-- PREGUNTA 2 -->
+
+<div class="info-box">
+
+    <span class="numero">02</span>
+
+    <h2>¿Qué símbolo utiliza jQuery?</h2>
+
+    <label>
+        <input type="radio" name="p2" value="a">
+        #
+    </label>
+
+    <label>
+        <input type="radio" name="p2" value="b">
+        $
+    </label>
+
+    <label>
+        <input type="radio" name="p2" value="c">
+        %
+    </label>
+
+</div>
+
+
+<!-- PREGUNTA 3 -->
+
+<div class="info-box">
+
+    <span class="numero">03</span>
+
+    <h2>¿Qué significa JSON?</h2>
+
+    <label>
+        <input type="radio" name="p3" value="a">
+        JavaScript Object Notation
+    </label>
+
+    <label>
+        <input type="radio" name="p3" value="b">
+        Java System Online Network
+    </label>
+
+    <label>
+        <input type="radio" name="p3" value="c">
+        JavaScript Online Name
+    </label>
+
+</div>
+
+
+<!-- PREGUNTA 4 -->
+
+<div class="info-box">
+
+    <span class="numero">04</span>
+
+    <h2>¿Qué es un dominio?</h2>
+
+    <label>
+        <input type="radio" name="p4" value="a">
+        El nombre de un videojuego
+    </label>
+
+    <label>
+        <input type="radio" name="p4" value="b">
+        Una dirección que identifica un sitio web
+    </label>
+
+    <label>
+        <input type="radio" name="p4" value="c">
+        Un lenguaje de programación
+    </label>
+
+</div>
+
+
+<!-- PREGUNTA 5 -->
+
+<div class="info-box">
+
+    <span class="numero">05</span>
+
+    <h2>¿Qué permite hacer un Web Hosting?</h2>
+
+    <label>
+        <input type="radio" name="p5" value="a">
+        Alojar un sitio web
+    </label>
+
+    <label>
+        <input type="radio" name="p5" value="b">
+        Crear videojuegos automáticamente
+    </label>
+
+    <label>
+        <input type="radio" name="p5" value="c">
+        Crear una computadora
+    </label>
+
+</div>
+
+
+<br>
+
+<button type="button" class="btn principal" onclick="calificar()">
+    ⚡ VER RESULTADO
+</button>
+
+</form>
+
+
+<div id="resultado" class="game-panel" style="display:none; margin-top:30px;">
+
+    <div class="game-icon">
+        🏆
+    </div>
+
+    <h2 id="mensaje"></h2>
+
+    <p id="puntuacion"></p>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="logo">
+        GAME<span>ZONE</span>
+    </div>
+
+    <p>
+        GameZone © 2026
+    </p>
+
+</footer>
+
+
+<script>
+
+function calificar() {
+
+    let respuestas = {
+        p1: "b",
+        p2: "b",
+        p3: "a",
+        p4: "b",
+        p5: "a"
+    };
+
+    let puntos = 0;
+
+    for (let pregunta in respuestas) {
+
+        let seleccion =
+            document.querySelector(
+                'input[name="' + pregunta + '"]:checked'
+            );
+
+        if (seleccion &&
+            seleccion.value === respuestas[pregunta]) {
+
+            puntos++;
+
+        }
+
+    }
+
+    document.getElementById("resultado").style.display = "block";
+
+    document.getElementById("puntuacion").textContent =
+        "Obtuviste " + puntos + " de 5 respuestas correctas.";
+
+    if (puntos === 5) {
+
+        document.getElementById("mensaje").textContent =
+            "🔥 ¡PERFECTO! Nivel experto.";
+
+    } else if (puntos >= 3) {
+
+        document.getElementById("mensaje").textContent =
+            "🎮 ¡Muy bien! Sigue practicando.";
+
+    } else {
+
+        document.getElementById("mensaje").textContent =
+            "💪 Sigue aprendiendo y vuelve a intentarlo.";
+
+    }
+
+}
+
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

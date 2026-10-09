@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos | GameZone</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contacto-container {
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #1e1e2f;
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .contacto-container h1 {
+            text-align: center;
+            color: #7c83ff;
+            margin-bottom: 10px;
+        }
+
+        .contacto-container p {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #d1d1e0;
+        }
+
+        .contacto-form label {
+            display: block;
+            margin: 15px 0 7px;
+            font-weight: bold;
+        }
+
+        .contacto-form input,
+        .contacto-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #44445c;
+            border-radius: 8px;
+            background: #292940;
+            color: white;
+            font: inherit;
+        }
+
+        .contacto-form textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .contacto-form input:focus,
+        .contacto-form textarea:focus {
+            outline: 2px solid #7c83ff;
+        }
+
+        .contacto-form button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #5865f2;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .contacto-form button:hover {
+            background: #4752c4;
+        }
+
+        .volver-inicio {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #aeb3ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="contacto-container">
+        <h1>🎮 Contáctanos</h1>
+        <p>¿Tienes alguna pregunta o sugerencia? ¡Escríbenos!</p>
+
+        <form class="contacto-form" id="formContacto">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre"
+                   placeholder="Escribe tu nombre"
+                   maxlength="80" required>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo"
+                   placeholder="ejemplo@correo.com"
+                   maxlength="254" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje"
+                      placeholder="Escribe tu mensaje..."
+                      maxlength="2000" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <a class="volver-inicio" href="index.html">
+            ← Volver al inicio
+        </a>
+    </main>
+
+    <script>
+        document.getElementById("formContacto").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            // URL exacta de tu Webhook
+            const webhookURL = "https://discord.com/api/webhooks/1557903832158310531/d-riVst9mkr0xNvChjT9Igw7FuKuIHCbfcLy-PdvC0_OY3KT_IzCqdv4Gjr8uhcOTWXd";
+
+            const boton = this.querySelector('button[type="submit"]');
+
+            const nombre = document.getElementById("nombre").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
+
+            // Formato de mensaje elegante para Discord
+            const payload = {
+                embeds: [
+                    {
+                        title: "📩 ¡Nuevo mensaje desde GameZone!",
+                        color: 5814783,
+                        fields: [
+                            { name: "👤 Nombre", value: nombre, inline: true },
+                            { name: "✉️ Correo", value: correo, inline: true },
+                            { name: "💬 Mensaje", value: mensaje }
+                        ],
+                        timestamp: new Date().toISOString()
+                    }
+                ]
+            };
+
+            boton.disabled = true;
+            boton.textContent = "Enviando...";
+
+            try {
+                // Ahora sí hace la petición directamente a la URL de Discord
+                const respuesta = await fetch(webhookURL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (respuesta.ok) {
+                    alert("¡Mensaje enviado con éxito a Discord!");
+                    this.reset();
+                } else {
+                    alert("Error al enviar el mensaje a Discord. Revisa la URL del Webhook.");
+                }
+
+            } catch (error) {
+                console.error("Error:", error);
+                alert("No se pudo conectar con Discord. Abre la página usando Live Server.");
+
+            } finally {
+                boton.disabled = false;
+                boton.textContent = "Enviar mensaje";
+            }
+        });
+    </script>
+
+</body>
+</html>

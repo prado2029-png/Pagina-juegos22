@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone | Gaming & Web</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            GAME<span>ZONE</span>
+        </a>
+
+        <nav>
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="javascript.html">JavaScript</a>
+            <a href="jquery.html">jQuery</a>
+            <a href="json.html">JSON</a>
+            <a href="hosting.html">Hosting</a>
+            <a href="dominios.html">Dominios</a>
+            <a href="cuestionario.html">Quiz</a>
+            <a href="recursos.html">Recursos</a>
+            <a href="herramientas-google.html">Googlee</a>
+            <a href="contactanos.html">Contáctanos</a>
+            <button id="modoBtn" class="modo-btn" type="button">☀️</button>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-contenido">
+
+            <p class="etiqueta">🎮 GAMING & TECHNOLOGY</p>
+
+            <h1>
+                EL MUNDO DE LOS
+                <span>VIDEOJUEGOS</span>
+            </h1>
+
+            <p class="hero-texto">
+                Descubre videojuegos, tecnología y conceptos de
+                desarrollo web en un solo lugar.
+            </p>
+
+            <div class="botones">
+
+                <a href="#juegos" class="btn principal">
+                    Explorar juegos
+                </a>
+
+                <a href="javascript.html" class="btn secundario">
+                    Aprender
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-juego">
+
+            <div class="circulo"></div>
+
+            <div class="control">
+                🎮
+            </div>
+
+            <div class="texto-flotante">
+                <strong>GAME ON</strong>
+                <small>LEVEL UP YOUR KNOWLEDGE</small>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="container my-5">
+
+    <div id="gameCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#gameCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner rounded-4 overflow-hidden">
+
+            <div class="carousel-item active">
+                <img src="img/gta.jpg" class="d-block w-100" alt="GTA V">
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/minecraf.jpg" class="d-block w-100" alt="Minecraft">
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/fc.jpg" class="d-block w-100" alt="EA Sports FC">
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#gameCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#gameCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- JUEGOS DESTACADOS -->
+
+    <section class="seccion" id="juegos">
+
+        <div class="titulo-seccion">
+
+            <p>DESTACADOS</p>
+
+            <h2>
+                JUEGOS <span>POPULARES</span>
+            </h2>
+
+        </div>
+
+
+        <div class="juegos-grid">
+
+
+            <article class="juego-card">
+
+                <div class="juego-imagen gta">
+                    
+                    <img src="img/gta.jpg" alt="GTA V">
+                </div>
+
+                <div class="juego-info">
+
+                    <span class="categoria">
+                        ACCIÓN
+                    </span>
+
+                    <h3>Grand Theft Auto V</h3>
+
+                    <p>
+                        Un mundo abierto lleno de acción,
+                        vehículos y aventuras.
+                    </p>
+
+                    <button>
+                        Ver más →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="juego-card">
+
+                <div class="juego-imagen minecraft">
+                    
+                    <img src="img/minecraf.jpg" alt="GTA V">
+                </div>
+
+                <div class="juego-info">
+
+                    <span class="categoria">
+                        AVENTURA
+                    </span>
+
+                    <h3>Minecraft</h3>
+
+                    <p>
+                        Explora, construye y crea tu propio
+                        mundo utilizando bloques.
+                    </p>
+
+                    <button>
+                        Ver más →
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <article class="juego-card">
+
+                <div class="juego-imagen fc">
+                   <img src="img/fc.jpg" alt="GTA V">
+                </div>
+
+                <div class="juego-info">
+
+                    <span class="categoria">
+                        DEPORTES
+                    </span>
+
+                    <h3>EA Sports FC</h3>
+
+                    <p>
+                        Vive la experiencia del fútbol
+                        y compite con tus equipos favoritos.
+                    </p>
+
+                    <button>
+                        Ver más →
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE GAMEZONE -->
+
+    <section class="sobre">
+
+        <div>
+
+            <p class="etiqueta">
+                SOBRE EL PROYECTO
+            </p>
+
+            <h2>
+                MÁS QUE UNA
+                <span>PÁGINA GAMER</span>
+            </h2>
+
+        </div>
+
+        <div class="sobre-texto">
+
+            <p>
+                GameZone es un sitio web creado para presentar
+                información sobre videojuegos y, al mismo tiempo,
+                aprender sobre diferentes tecnologías utilizadas
+                en el desarrollo web.
+            </p>
+
+            <div class="estadisticas">
+
+                <div>
+                    <strong>08</strong>
+                    <small>PÁGINAS</small>
+                </div>
+
+                <div>
+                    <strong>04</strong>
+                    <small>TECNOLOGÍAS</small>
+                </div>
+
+                <div>
+                    <strong>01</strong>
+                    <small>QUIZ</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- PALETA DE COLORES -->
+
+<section class="paleta">
+
+    <div class="titulo-seccion">
+        <p>IDENTIDAD VISUAL</p>
+
+        <h2>
+            PALETA DE <span>COLORES</span>
+        </h2>
+    </div>
+
+    <div class="colores">
+
+        <div class="color-card">
+            <div class="color-muestra azul-oscuro"></div>
+            <h3>Azul oscuro</h3>
+            <p>#0B1026</p>
+            <small>Tecnología y confianza</small>
+        </div>
+
+        <div class="color-card">
+            <div class="color-muestra azul"></div>
+            <h3>Azul brillante</h3>
+            <p>#3B82F6</p>
+            <small>Innovación y modernidad</small>
+        </div>
+
+        <div class="color-card">
+            <div class="color-muestra verde"></div>
+            <h3>Verde</h3>
+            <p>#39FF88</p>
+            <small>Energía y creatividad</small>
+        </div>
+
+    </div>
+
+    <p class="paleta-descripcion">
+        La combinación de estos colores representa la tecnología,
+        innovación y energía que caracterizan a GAMEZONE.
+    </p>
+
+</section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+            GAME<span>ZONE</span>
+        </div>
+
+        <p>
+            Proyecto educativo de desarrollo web © 2026
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

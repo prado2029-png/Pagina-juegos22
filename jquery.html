@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone | jQuery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        GAME<span>ZONE</span>
+    </a>
+
+    <nav>
+
+        <a href="index.html">Inicio</a>
+
+        <a href="javascript.html">
+            JavaScript
+        </a>
+
+        <a href="jquery.html" class="activo">
+            jQuery
+        </a>
+
+        <a href="json.html">
+            JSON
+        </a>
+
+        <a href="hosting.html">
+            Hosting
+        </a>
+
+        <a href="dominios.html">
+            Dominios
+        </a>
+
+        <a href="cuestionario.html">
+            Quiz
+        </a>
+
+        <a href="recursos.html">
+            Recursos
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <section class="pagina-header">
+
+        <p class="etiqueta">
+            JAVASCRIPT LIBRARY
+        </p>
+
+        <h1>
+            jQuery <span>⚙</span>
+        </h1>
+
+        <p>
+            Una librería que facilita el trabajo con JavaScript
+            y permite crear efectos de forma sencilla.
+        </p>
+
+    </section>
+
+
+    <section class="contenido-tech">
+
+
+        <div class="info-box">
+
+            <span class="numero">
+                01
+            </span>
+
+            <h2>
+                ¿Qué es jQuery?
+            </h2>
+
+            <p>
+                jQuery es una librería de JavaScript creada para
+                simplificar tareas comunes del desarrollo web.
+            </p>
+
+            <p>
+                Permite trabajar fácilmente con elementos HTML,
+                eventos, animaciones y efectos.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span class="numero">
+                02
+            </span>
+
+            <h2>
+                Sintaxis
+            </h2>
+
+            <div class="codigo pequeño">
+
+<pre><code>
+$("#mensaje").hide();
+</code></pre>
+
+            </div>
+
+            <p>
+                El símbolo <strong>$</strong> es utilizado para
+                seleccionar elementos de la página.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="seccion">
+
+        <div class="titulo-seccion">
+
+            <p>CARACTERÍSTICAS</p>
+
+            <h2>
+                EFECTOS <span>jQUERY</span>
+            </h2>
+
+        </div>
+
+
+        <div class="jquery-demo">
+
+            <div
+                id="mensaje"
+                class="game-panel">
+
+                <div class="game-icon">
+                    🎮
+                </div>
+
+                <h3>
+                    GAMEZONE
+                </h3>
+
+                <p>
+                    Este panel puede ocultarse,
+                    mostrarse o deslizarse utilizando jQuery.
+                </p>
+
+            </div>
+
+
+            <div class="botones">
+
+                <button
+                    id="fadeOut"
+                    class="btn secundario">
+
+                    Fade Out
+
+                </button>
+
+
+                <button
+                    id="fadeIn"
+                    class="btn secundario">
+
+                    Fade In
+
+                </button>
+
+
+                <button
+                    id="slide"
+                    class="btn principal">
+
+                    Slide Toggle
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="contenido-tech">
+
+
+        <div class="info-box">
+
+            <span class="numero">
+                +
+            </span>
+
+            <h2>
+                Ventajas
+            </h2>
+
+            <p>✓ Sintaxis sencilla.</p>
+
+            <p>✓ Facilita las animaciones.</p>
+
+            <p>✓ Simplifica algunas tareas.</p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <span class="numero">
+                -
+            </span>
+
+            <h2>
+                Desventajas
+            </h2>
+
+            <p>• Agrega una dependencia.</p>
+
+            <p>
+                • JavaScript moderno ofrece
+                alternativas nativas.
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="logo">
+        GAME<span>ZONE</span>
+    </div>
+
+    <p>
+        GameZone © 2026
+    </p>
+
+</footer>
+
+
+<script>
+
+$("#fadeOut").click(function() {
+
+    $("#mensaje").fadeOut(500);
+
+});
+
+
+$("#fadeIn").click(function() {
+
+    $("#mensaje").fadeIn(500);
+
+});
+
+
+$("#slide").click(function() {
+
+    $("#mensaje").slideToggle(500);
+
+});
+
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
