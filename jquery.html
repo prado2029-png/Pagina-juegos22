@@ -29,35 +29,49 @@
 
     <nav>
 
-        <a href="index.html">Inicio</a>
+        <a href="index.html" data-i18n="nav_inicio">Inicio</a>
 
-        <a href="javascript.html">
+        <a href="javascript.html" data-i18n="nav_js">
             JavaScript
         </a>
 
-        <a href="jquery.html" class="activo">
+        <a href="jquery.html" class="activo" data-i18n="nav_jquery">
             jQuery
         </a>
 
-        <a href="json.html">
+        <a href="json.html" data-i18n="nav_json">
             JSON
         </a>
 
-        <a href="hosting.html">
+        <a href="hosting.html" data-i18n="nav_hosting">
             Hosting
         </a>
 
-        <a href="dominios.html">
+        <a href="dominios.html" data-i18n="nav_dominios">
             Dominios
         </a>
 
-        <a href="cuestionario.html">
+        <a href="cuestionario.html" data-i18n="nav_quiz">
             Quiz
         </a>
 
-        <a href="recursos.html">
+        <a href="recursos.html" data-i18n="nav_recursos">
             Recursos
         </a>
+
+        <a href="herramientas-google.html" data-i18n="nav_google">
+            Google
+        </a>
+
+        <a href="contactanos.html" data-i18n="nav_contacto">
+            Contáctanos
+        </a>
+
+        <!-- Botón de Idioma -->
+        <button id="btn-idioma" class="modo-btn" type="button" title="Cambiar idioma">🌐 <span id="btn-lang-text">EN</span></button>
+
+        <!-- Botón de Modo Oscuro -->
+        <button id="modoBtn" class="modo-btn" type="button">☀️</button>
 
     </nav>
 
@@ -69,7 +83,7 @@
 
     <section class="pagina-header">
 
-        <p class="etiqueta">
+        <p class="etiqueta" data-i18n="jq_header_etiqueta">
             JAVASCRIPT LIBRARY
         </p>
 
@@ -77,9 +91,8 @@
             jQuery <span>⚙</span>
         </h1>
 
-        <p>
-            Una librería que facilita el trabajo con JavaScript
-            y permite crear efectos de forma sencilla.
+        <p data-i18n="jq_header_desc">
+            Una librería que facilita el trabajo con JavaScript y permite crear efectos de forma sencilla.
         </p>
 
     </section>
@@ -94,18 +107,16 @@
                 01
             </span>
 
-            <h2>
+            <h2 data-i18n="jq_info_1_titulo">
                 ¿Qué es jQuery?
             </h2>
 
-            <p>
-                jQuery es una librería de JavaScript creada para
-                simplificar tareas comunes del desarrollo web.
+            <p data-i18n="jq_info_1_p1">
+                jQuery es una librería de JavaScript creada para simplificar tareas comunes del desarrollo web.
             </p>
 
-            <p>
-                Permite trabajar fácilmente con elementos HTML,
-                eventos, animaciones y efectos.
+            <p data-i18n="jq_info_1_p2">
+                Permite trabajar fácilmente con elementos HTML, eventos, animaciones y efectos.
             </p>
 
         </div>
@@ -117,7 +128,7 @@
                 02
             </span>
 
-            <h2>
+            <h2 data-i18n="jq_info_2_titulo">
                 Sintaxis
             </h2>
 
@@ -129,9 +140,8 @@ $("#mensaje").hide();
 
             </div>
 
-            <p>
-                El símbolo <strong>$</strong> es utilizado para
-                seleccionar elementos de la página.
+            <p data-i18n="jq_info_2_desc">
+                El símbolo <strong>$</strong> es utilizado para seleccionar elementos de la página.
             </p>
 
         </div>
@@ -144,10 +154,10 @@ $("#mensaje").hide();
 
         <div class="titulo-seccion">
 
-            <p>CARACTERÍSTICAS</p>
+            <p data-i18n="jq_seccion_etiqueta">CARACTERÍSTICAS</p>
 
             <h2>
-                EFECTOS <span>jQUERY</span>
+                <span data-i18n="jq_seccion_tit_1">EFECTOS</span> <span>jQUERY</span>
             </h2>
 
         </div>
@@ -167,9 +177,8 @@ $("#mensaje").hide();
                     GAMEZONE
                 </h3>
 
-                <p>
-                    Este panel puede ocultarse,
-                    mostrarse o deslizarse utilizando jQuery.
+                <p data-i18n="jq_panel_desc">
+                    Este panel puede ocultarse, mostrarse o deslizarse utilizando jQuery.
                 </p>
 
             </div>
@@ -219,15 +228,15 @@ $("#mensaje").hide();
                 +
             </span>
 
-            <h2>
+            <h2 data-i18n="jq_ventajas_titulo">
                 Ventajas
             </h2>
 
-            <p>✓ Sintaxis sencilla.</p>
+            <p data-i18n="jq_v1">✓ Sintaxis sencilla.</p>
 
-            <p>✓ Facilita las animaciones.</p>
+            <p data-i18n="jq_v2">✓ Facilita las animaciones.</p>
 
-            <p>✓ Simplifica algunas tareas.</p>
+            <p data-i18n="jq_v3">✓ Simplifica algunas tareas.</p>
 
         </div>
 
@@ -238,15 +247,14 @@ $("#mensaje").hide();
                 -
             </span>
 
-            <h2>
+            <h2 data-i18n="jq_desventajas_titulo">
                 Desventajas
             </h2>
 
-            <p>• Agrega una dependencia.</p>
+            <p data-i18n="jq_d1">Agrega una dependencia.</p>
 
-            <p>
-                • JavaScript moderno ofrece
-                alternativas nativas.
+            <p data-i18n="jq_d2">
+                • JavaScript moderno ofrece alternativas nativas.
             </p>
 
         </div>
@@ -264,8 +272,8 @@ $("#mensaje").hide();
         GAME<span>ZONE</span>
     </div>
 
-    <p>
-        GameZone © 2026
+    <p data-i18n="footer_texto">
+        Proyecto educativo de desarrollo web © 2026
     </p>
 
 </footer>

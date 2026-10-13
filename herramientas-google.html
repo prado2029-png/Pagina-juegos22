@@ -25,15 +25,22 @@
         </a>
 
         <nav>
-            <a href="index.html">Inicio</a>
-            <a href="javascript.html">JavaScript</a>
-            <a href="jquery.html">jQuery</a>
-            <a href="json.html">JSON</a>
-            <a href="hosting.html">Hosting</a>
-            <a href="dominios.html">Dominios</a>
-            <a href="cuestionario.html">Quiz</a>
-            <a href="recursos.html">Recursos</a>
-            <a href="herramientas-google.html" class="activo">Google</a>
+            <a href="index.html" data-i18n="nav_inicio">Inicio</a>
+            <a href="javascript.html" data-i18n="nav_js">JavaScript</a>
+            <a href="jquery.html" data-i18n="nav_jquery">jQuery</a>
+            <a href="json.html" data-i18n="nav_json">JSON</a>
+            <a href="hosting.html" data-i18n="nav_hosting">Hosting</a>
+            <a href="dominios.html" data-i18n="nav_dominios">Dominios</a>
+            <a href="cuestionario.html" data-i18n="nav_quiz">Quiz</a>
+            <a href="recursos.html" data-i18n="nav_recursos">Recursos</a>
+            <a href="herramientas-google.html" class="activo" data-i18n="nav_google">Google</a>
+            <a href="contactanos.html" data-i18n="nav_contacto">Contáctanos</a>
+
+            <!-- Botón de Idioma -->
+            <button id="btn-idioma" class="modo-btn" type="button" title="Cambiar idioma">🌐 <span id="btn-lang-text">EN</span></button>
+
+            <!-- Botón de Modo Oscuro -->
+            <button id="modoBtn" class="modo-btn" type="button">☀️</button>
         </nav>
 
     </header>
@@ -45,11 +52,10 @@
 
         <span>🌐</span>
 
-        <h1>15 HERRAMIENTAS DE GOOGLE</h1>
+        <h1 data-i18n="g_header_tit">15 HERRAMIENTAS DE GOOGLE</h1>
 
-        <p>
-            Conoce algunas herramientas gratuitas de Google
-            y descubre para qué sirven.
+        <p data-i18n="g_header_desc">
+            Conoce algunas herramientas gratuitas de Google y descubre para qué sirven.
         </p>
 
     </section>
@@ -61,10 +67,10 @@
 
         <div class="titulo-seccion">
 
-            <p>GOOGLE TOOLS</p>
+            <p data-i18n="g_seccion_etiqueta">GOOGLE TOOLS</p>
 
             <h2>
-                HERRAMIENTAS <span>GRATUITAS</span>
+                <span data-i18n="g_seccion_tit_1">HERRAMIENTAS</span> <span data-i18n="g_seccion_tit_2">GRATUITAS</span>
             </h2>
 
         </div>
@@ -81,12 +87,11 @@
 
                 <h3>Google Drive</h3>
 
-                <p>
-                    Permite almacenar archivos, documentos,
-                    imágenes y otros contenidos en la nube.
+                <p data-i18n="g1_desc">
+                    Permite almacenar archivos, documentos, imágenes y otros contenidos en la nube.
                 </p>
 
-                <small>
+                <small data-i18n="g1_uso">
                     Uso: guardar y compartir archivos.
                 </small>
 
@@ -101,12 +106,11 @@
 
                 <h3>Google Docs</h3>
 
-                <p>
-                    Es una herramienta para crear y editar
-                    documentos de texto desde Internet.
+                <p data-i18n="g2_desc">
+                    Es una herramienta para crear y editar documentos de texto desde Internet.
                 </p>
 
-                <small>
+                <small data-i18n="g2_uso">
                     Uso: trabajos, informes y documentos.
                 </small>
 
@@ -121,12 +125,11 @@
 
                 <h3>Google Sheets</h3>
 
-                <p>
-                    Permite crear hojas de cálculo,
-                    organizar información y realizar operaciones.
+                <p data-i18n="g3_desc">
+                    Permite crear hojas de cálculo, organizar información y realizar operaciones.
                 </p>
 
-                <small>
+                <small data-i18n="g3_uso">
                     Uso: tablas, datos y cálculos.
                 </small>
 
@@ -141,12 +144,11 @@
 
                 <h3>Google Slides</h3>
 
-                <p>
-                    Sirve para crear presentaciones
-                    con texto, imágenes y diferentes diseños.
+                <p data-i18n="g4_desc">
+                    Sirve para crear presentaciones con texto, imágenes y diferentes diseños.
                 </p>
 
-                <small>
+                <small data-i18n="g4_uso">
                     Uso: exposiciones y presentaciones.
                 </small>
 
@@ -161,12 +163,11 @@
 
                 <h3>Google Forms</h3>
 
-                <p>
-                    Permite crear formularios, encuestas
-                    y cuestionarios en línea.
+                <p data-i18n="g5_desc">
+                    Permite crear formularios, encuestas y cuestionarios en línea.
                 </p>
 
-                <small>
+                <small data-i18n="g5_uso">
                     Uso: recopilar respuestas y datos.
                 </small>
 
@@ -181,12 +182,11 @@
 
                 <h3>Google Sites</h3>
 
-                <p>
-                    Permite crear sitios web de manera
-                    sencilla sin necesidad de programar.
+                <p data-i18n="g6_desc">
+                    Permite crear sitios web de manera sencilla sin necesidad de programar.
                 </p>
 
-                <small>
+                <small data-i18n="g6_uso">
                     Uso: crear páginas web.
                 </small>
 
@@ -201,12 +201,11 @@
 
                 <h3>Google Meet</h3>
 
-                <p>
-                    Servicio para realizar videollamadas
-                    y reuniones en línea.
+                <p data-i18n="g7_desc">
+                    Servicio para realizar videollamadas y reuniones en línea.
                 </p>
 
-                <small>
+                <small data-i18n="g7_uso">
                     Uso: clases y reuniones virtuales.
                 </small>
 
@@ -221,12 +220,11 @@
 
                 <h3>Google Calendar</h3>
 
-                <p>
-                    Permite organizar eventos, actividades,
-                    tareas y recordatorios.
+                <p data-i18n="g8_desc">
+                    Permite organizar eventos, actividades, tareas y recordatorios.
                 </p>
 
-                <small>
+                <small data-i18n="g8_uso">
                     Uso: organizar horarios.
                 </small>
 
@@ -241,12 +239,11 @@
 
                 <h3>Google Keep</h3>
 
-                <p>
-                    Permite crear notas, listas y recordatorios
-                    para organizar información.
+                <p data-i18n="g9_desc">
+                    Permite crear notas, listas y recordatorios para organizar información.
                 </p>
 
-                <small>
+                <small data-i18n="g9_uso">
                     Uso: tomar notas rápidamente.
                 </small>
 
@@ -261,12 +258,11 @@
 
                 <h3>Google Maps</h3>
 
-                <p>
-                    Permite buscar lugares, consultar mapas
-                    y obtener indicaciones.
+                <p data-i18n="g10_desc">
+                    Permite buscar lugares, consultar mapas y obtener indicaciones.
                 </p>
 
-                <small>
+                <small data-i18n="g10_uso">
                     Uso: encontrar lugares y rutas.
                 </small>
 
@@ -281,12 +277,11 @@
 
                 <h3>Google Photos</h3>
 
-                <p>
-                    Servicio para almacenar, organizar
-                    y administrar fotografías y videos.
+                <p data-i18n="g11_desc">
+                    Servicio para almacenar, organizar y administrar fotografías y videos.
                 </p>
 
-                <small>
+                <small data-i18n="g11_uso">
                     Uso: guardar y organizar fotos.
                 </small>
 
@@ -301,12 +296,11 @@
 
                 <h3>Google Translate</h3>
 
-                <p>
-                    Permite traducir palabras, frases
-                    y textos entre diferentes idiomas.
+                <p data-i18n="g12_desc">
+                    Permite traducir palabras, frases y textos entre diferentes idiomas.
                 </p>
 
-                <small>
+                <small data-i18n="g12_uso">
                     Uso: traducción de idiomas.
                 </small>
 
@@ -321,12 +315,11 @@
 
                 <h3>Google Classroom</h3>
 
-                <p>
-                    Plataforma educativa para administrar
-                    clases, tareas y materiales.
+                <p data-i18n="g13_desc">
+                    Plataforma educativa para administrar clases, tareas y materiales.
                 </p>
 
-                <small>
+                <small data-i18n="g13_uso">
                     Uso: educación virtual.
                 </small>
 
@@ -341,12 +334,11 @@
 
                 <h3>Google Gemini</h3>
 
-                <p>
-                    Herramienta de inteligencia artificial
-                    que ayuda a generar y analizar información.
+                <p data-i18n="g14_desc">
+                    Herramienta de inteligencia artificial que ayuda a generar y analizar información.
                 </p>
 
-                <small>
+                <small data-i18n="g14_uso">
                     Uso: asistencia con inteligencia artificial.
                 </small>
 
@@ -361,12 +353,11 @@
 
                 <h3>Google Search</h3>
 
-                <p>
-                    Motor de búsqueda que permite encontrar
-                    información y sitios web en Internet.
+                <p data-i18n="g15_desc">
+                    Motor de búsqueda que permite encontrar información y sitios web en Internet.
                 </p>
 
-                <small>
+                <small data-i18n="g15_uso">
                     Uso: buscar información.
                 </small>
 
@@ -385,7 +376,7 @@
             GAME<span>ZONE</span>
         </div>
 
-        <p>
+        <p data-i18n="footer_texto">
             Proyecto educativo de desarrollo web © 2026
         </p>
 

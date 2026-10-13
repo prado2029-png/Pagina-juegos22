@@ -14,61 +14,64 @@
     <a href="index.html" class="logo">GAME<span>ZONE</span></a>
 
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="javascript.html">JavaScript</a>
-        <a href="jquery.html">jQuery</a>
-        <a href="json.html">JSON</a>
-        <a href="hosting.html" class="activo">Hosting</a>
-        <a href="dominios.html">Dominios</a>
-        <a href="cuestionario.html">Quiz</a>
-        <a href="recursos.html">Recursos</a>
+        <a href="index.html" data-i18n="nav_inicio">Inicio</a>
+        <a href="javascript.html" data-i18n="nav_js">JavaScript</a>
+        <a href="jquery.html" data-i18n="nav_jquery">jQuery</a>
+        <a href="json.html" data-i18n="nav_json">JSON</a>
+        <a href="hosting.html" class="activo" data-i18n="nav_hosting">Hosting</a>
+        <a href="dominios.html" data-i18n="nav_dominios">Dominios</a>
+        <a href="cuestionario.html" data-i18n="nav_quiz">Quiz</a>
+        <a href="recursos.html" data-i18n="nav_recursos">Recursos</a>
+        <a href="herramientas-google.html" data-i18n="nav_google">Google</a>
+        <a href="contactanos.html" data-i18n="nav_contacto">Contáctanos</a>
+
+        <!-- Botón de Idioma -->
+        <button id="btn-idioma" class="modo-btn" type="button" title="Cambiar idioma">🌐 <span id="btn-lang-text">EN</span></button>
+        <!-- Botón de Modo Oscuro -->
+        <button id="modoBtn" class="modo-btn" type="button">☀️</button>
     </nav>
 </header>
 
 <main>
 
 <section class="pagina-header">
-    <p class="etiqueta">WEB INFRASTRUCTURE</p>
+    <p class="etiqueta" data-i18n="hosting_header_etiqueta">WEB INFRASTRUCTURE</p>
     <h1>WEB <span>HOSTING</span></h1>
-    <p>
-        El servicio que permite almacenar un sitio web
-        y hacerlo accesible desde Internet.
+    <p data-i18n="hosting_header_desc">
+        El servicio que permite almacenar un sitio web y hacerlo accesible desde Internet.
     </p>
 </section>
 
 <section class="seccion">
 
     <div class="titulo-seccion">
-        <p>TIPOS DE HOSTING</p>
-        <h2>¿DÓNDE VIVE TU <span>PÁGINA?</span></h2>
+        <p data-i18n="hosting_seccion_etiqueta">TIPOS DE HOSTING</p>
+        <h2><span data-i18n="hosting_seccion_tit_1">¿DÓNDE VIVE TU</span> <span data-i18n="hosting_seccion_tit_2">PÁGINA?</span></h2>
     </div>
 
     <div class="conceptos-grid">
 
         <div class="concepto">
             <span>01</span>
-            <h3>Compartido</h3>
-            <p>
-                Varios sitios web utilizan los recursos
-                de un mismo servidor.
+            <h3 data-i18n="hosting_c1_titulo">Compartido</h3>
+            <p data-i18n="hosting_c1_desc">
+                Varios sitios web utilizan los recursos de un mismo servidor.
             </p>
         </div>
 
         <div class="concepto">
             <span>02</span>
-            <h3>VPS</h3>
-            <p>
-                Un servidor físico se divide en servidores
-                virtuales con recursos asignados.
+            <h3 data-i18n="hosting_c2_titulo">VPS</h3>
+            <p data-i18n="hosting_c2_desc">
+                Un servidor físico se divide en servidores virtuales con recursos asignados.
             </p>
         </div>
 
         <div class="concepto">
             <span>03</span>
-            <h3>Nube</h3>
-            <p>
-                Utiliza diferentes servidores para ofrecer
-                recursos y disponibilidad.
+            <h3 data-i18n="hosting_c3_titulo">Nube</h3>
+            <p data-i18n="hosting_c3_desc">
+                Utiliza diferentes servidores para ofrecer recursos y disponibilidad.
             </p>
         </div>
 
@@ -79,18 +82,16 @@
 <section class="codigo-section">
 
     <div>
-        <p class="etiqueta">DESPLIEGUE</p>
+        <p class="etiqueta" data-i18n="hosting_codigo_etiqueta">DESPLIEGUE</p>
 
-        <h2>¿QUÉ ES <span>VERCEL?</span></h2>
+        <h2><span data-i18n="hosting_codigo_tit_1">¿QUÉ ES</span> <span data-i18n="hosting_codigo_tit_2">VERCEL?</span></h2>
 
-        <p>
-            Vercel es una plataforma que permite desplegar
-            proyectos web y hacerlos accesibles desde Internet.
+        <p data-i18n="hosting_codigo_p1">
+            Vercel es una plataforma que permite desplegar proyectos web y hacerlos accesibles desde Internet.
         </p>
 
-        <p>
-            Puede conectarse con un repositorio de GitHub
-            para publicar automáticamente los cambios.
+        <p data-i18n="hosting_codigo_p2">
+            Puede conectarse con un repositorio de GitHub para publicar automáticamente los cambios.
         </p>
     </div>
 
@@ -99,7 +100,7 @@
 
         <h3>GITHUB → VERCEL</h3>
 
-        <p>
+        <p data-i18n="hosting_panel_desc">
             Código → Repositorio → Despliegue → Sitio web
         </p>
     </div>
@@ -110,7 +111,7 @@
 
 <footer>
     <div class="logo">GAME<span>ZONE</span></div>
-    <p>GameZone © 2026</p>
+    <p data-i18n="footer_texto">GameZone © 2026</p>
 </footer>
 <script src="script.js"></script>
 

@@ -9,6 +9,9 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -23,14 +26,21 @@
 
     <nav>
 
-        <a href="index.html">Inicio</a>
-        <a href="javascript.html">JavaScript</a>
-        <a href="jquery.html">jQuery</a>
-        <a href="json.html">JSON</a>
-        <a href="hosting.html">Hosting</a>
-        <a href="dominios.html">Dominios</a>
-        <a href="cuestionario.html" class="activo">Quiz</a>
-        <a href="recursos.html">Recursos</a>
+        <a href="index.html" data-i18n="nav_inicio">Inicio</a>
+        <a href="javascript.html" data-i18n="nav_js">JavaScript</a>
+        <a href="jquery.html" data-i18n="nav_jquery">jQuery</a>
+        <a href="json.html" data-i18n="nav_json">JSON</a>
+        <a href="hosting.html" data-i18n="nav_hosting">Hosting</a>
+        <a href="dominios.html" data-i18n="nav_dominios">Dominios</a>
+        <a href="cuestionario.html" class="activo" data-i18n="nav_quiz">Quiz</a>
+        <a href="recursos.html" data-i18n="nav_recursos">Recursos</a>
+        <a href="herramientas-google.html" data-i18n="nav_google">Google</a>
+        <a href="contactanos.html" data-i18n="nav_contacto">Contáctanos</a>
+
+        <!-- Botón de Idioma -->
+        <button id="btn-idioma" class="modo-btn" type="button" title="Cambiar idioma">🌐 <span id="btn-lang-text">EN</span></button>
+        <!-- Botón de Modo Oscuro -->
+        <button id="modoBtn" class="modo-btn" type="button">☀️</button>
 
     </nav>
 
@@ -41,14 +51,14 @@
 
 <section class="pagina-header">
 
-    <p class="etiqueta">LEVEL UP</p>
+    <p class="etiqueta" data-i18n="quiz_header_etiqueta">LEVEL UP</p>
 
     <h1>
         WEB <span>QUIZ</span> 🎮
     </h1>
 
-    <p>
-        Pon a prueba lo que aprendistes sobre tecnologías web.
+    <p data-i18n="quiz_header_desc">
+        Pon a prueba lo que aprendiste sobre tecnologías web.
     </p>
 
 </section>
@@ -65,21 +75,21 @@
 
     <span class="numero">01</span>
 
-    <h2>¿Qué hace JavaScript?</h2>
+    <h2 data-i18n="p1_pregunta">¿Qué hace JavaScript?</h2>
 
     <label>
         <input type="radio" name="p1" value="a">
-        Crear solamente imágenes
+        <span data-i18n="p1_a">Crear solamente imágenes</span>
     </label>
 
     <label>
         <input type="radio" name="p1" value="b">
-        Agregar comportamiento e interacción
+        <span data-i18n="p1_b">Agregar comportamiento e interacción</span>
     </label>
 
     <label>
         <input type="radio" name="p1" value="c">
-        Crear servidores físicos
+        <span data-i18n="p1_c">Crear servidores físicos</span>
     </label>
 
 </div>
@@ -91,7 +101,7 @@
 
     <span class="numero">02</span>
 
-    <h2>¿Qué símbolo utiliza jQuery?</h2>
+    <h2 data-i18n="p2_pregunta">¿Qué símbolo utiliza jQuery?</h2>
 
     <label>
         <input type="radio" name="p2" value="a">
@@ -117,7 +127,7 @@
 
     <span class="numero">03</span>
 
-    <h2>¿Qué significa JSON?</h2>
+    <h2 data-i18n="p3_pregunta">¿Qué significa JSON?</h2>
 
     <label>
         <input type="radio" name="p3" value="a">
@@ -143,21 +153,21 @@
 
     <span class="numero">04</span>
 
-    <h2>¿Qué es un dominio?</h2>
+    <h2 data-i18n="p4_pregunta">¿Qué es un dominio?</h2>
 
     <label>
         <input type="radio" name="p4" value="a">
-        El nombre de un videojuego
+        <span data-i18n="p4_a">El nombre de un videojuego</span>
     </label>
 
     <label>
         <input type="radio" name="p4" value="b">
-        Una dirección que identifica un sitio web
+        <span data-i18n="p4_b">Una dirección que identifica un sitio web</span>
     </label>
 
     <label>
         <input type="radio" name="p4" value="c">
-        Un lenguaje de programación
+        <span data-i18n="p4_c">Un lenguaje de programación</span>
     </label>
 
 </div>
@@ -169,21 +179,21 @@
 
     <span class="numero">05</span>
 
-    <h2>¿Qué permite hacer un Web Hosting?</h2>
+    <h2 data-i18n="p5_pregunta">¿Qué permite hacer un Web Hosting?</h2>
 
     <label>
         <input type="radio" name="p5" value="a">
-        Alojar un sitio web
+        <span data-i18n="p5_a">Alojar un sitio web</span>
     </label>
 
     <label>
         <input type="radio" name="p5" value="b">
-        Crear videojuegos automáticamente
+        <span data-i18n="p5_b">Crear videojuegos automáticamente</span>
     </label>
 
     <label>
         <input type="radio" name="p5" value="c">
-        Crear una computadora
+        <span data-i18n="p5_c">Crear una computadora</span>
     </label>
 
 </div>
@@ -191,7 +201,7 @@
 
 <br>
 
-<button type="button" class="btn principal" onclick="calificar()">
+<button type="button" class="btn principal" onclick="calificar()" data-i18n="btn_quiz">
     ⚡ VER RESULTADO
 </button>
 
@@ -221,7 +231,7 @@
         GAME<span>ZONE</span>
     </div>
 
-    <p>
+    <p data-i18n="footer_texto">
         GameZone © 2026
     </p>
 
@@ -231,7 +241,6 @@
 <script>
 
 function calificar() {
-
     let respuestas = {
         p1: "b",
         p2: "b",
@@ -243,43 +252,36 @@ function calificar() {
     let puntos = 0;
 
     for (let pregunta in respuestas) {
-
-        let seleccion =
-            document.querySelector(
-                'input[name="' + pregunta + '"]:checked'
-            );
-
-        if (seleccion &&
-            seleccion.value === respuestas[pregunta]) {
-
+        let seleccion = document.querySelector('input[name="' + pregunta + '"]:checked');
+        if (seleccion && seleccion.value === respuestas[pregunta]) {
             puntos++;
-
         }
-
     }
 
     document.getElementById("resultado").style.display = "block";
 
-    document.getElementById("puntuacion").textContent =
-        "Obtuviste " + puntos + " de 5 respuestas correctas.";
+    // Textos adaptados al idioma actual (idiomaActual viene de script.js)
+    const lang = typeof idiomaActual !== 'undefined' ? idiomaActual : 'es';
 
-    if (puntos === 5) {
-
-        document.getElementById("mensaje").textContent =
-            "🔥 ¡PERFECTO! Nivel experto.";
-
-    } else if (puntos >= 3) {
-
-        document.getElementById("mensaje").textContent =
-            "🎮 ¡Muy bien! Sigue practicando.";
-
+    if (lang === 'en') {
+        document.getElementById("puntuacion").textContent = "You got " + puntos + " out of 5 correct answers.";
+        if (puntos === 5) {
+            document.getElementById("mensaje").textContent = "🔥 PERFECT! Expert level.";
+        } else if (puntos >= 3) {
+            document.getElementById("mensaje").textContent = "🎮 Very good! Keep practicing.";
+        } else {
+            document.getElementById("mensaje").textContent = "💪 Keep learning and try again.";
+        }
     } else {
-
-        document.getElementById("mensaje").textContent =
-            "💪 Sigue aprendiendo y vuelve a intentarlo.";
-
+        document.getElementById("puntuacion").textContent = "Obtuviste " + puntos + " de 5 respuestas correctas.";
+        if (puntos === 5) {
+            document.getElementById("mensaje").textContent = "🔥 ¡PERFECTO! Nivel experto.";
+        } else if (puntos >= 3) {
+            document.getElementById("mensaje").textContent = "🎮 ¡Muy bien! Sigue practicando.";
+        } else {
+            document.getElementById("mensaje").textContent = "💪 Sigue aprendiendo y vuelve a intentarlo.";
+        }
     }
-
 }
 
 </script>

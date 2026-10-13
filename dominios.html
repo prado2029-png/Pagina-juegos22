@@ -3,119 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominios | GameZone</title>
+    <title>GameZone | Dominios</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="navbar">
-    <a href="index.html" class="logo">
-        GAME<span>ZONE</span>
-    </a>
+        <a href="index.html" class="logo">
+            GAME<span>ZONE</span>
+        </a>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="javascript.html">JavaScript</a>
-        <a href="jquery.html">jQuery</a>
-        <a href="json.html">JSON</a>
-        <a href="hosting.html">Hosting</a>
-        <a href="dominios.html"
-        class="activo">Dominios</a>
-        <a href="cuestionario.html">Cuestionario</a>
-        <a href="recursos.html">Recursos</a>
-    </nav>
-</header>
+        <nav>
+            <a href="index.html" data-i18n="nav_inicio">Inicio</a>
+            <a href="javascript.html" data-i18n="nav_js">JavaScript</a>
+            <a href="jquery.html" data-i18n="nav_jquery">jQuery</a>
+            <a href="json.html" data-i18n="nav_json">JSON</a>
+            <a href="hosting.html" data-i18n="nav_hosting">Hosting</a>
+            <a href="dominios.html" class="activo" data-i18n="nav_dominios">Dominios</a>
+            <a href="cuestionario.html" data-i18n="nav_quiz">Quiz</a>
+            <a href="recursos.html" data-i18n="nav_recursos">Recursos</a>
+            <a href="herramientas-google.html" data-i18n="nav_google">Google</a>
+            <a href="contactanos.html" data-i18n="nav_contacto">Contáctanos</a>
 
-    <header class="pagina-header">
-        <span>🌐</span>
-        <h1>DOMINIOS</h1>
-        <p>Conoce qué son los dominios y cómo funcionan en Internet.</p>
+            <!-- Botón de Idioma -->
+            <button id="btn-idioma" class="modo-btn" type="button" title="Cambiar idioma">🌐 <span id="btn-lang-text">EN</span></button>
+            <!-- Botón de Modo Oscuro -->
+            <button id="modoBtn" class="modo-btn" type="button">☀️</button>
+        </nav>
     </header>
+
+    <section class="pagina-header">
+        <span>🌐</span>
+        <h1 data-i18n="dom_header_tit">DOMINIOS</h1>
+        <p data-i18n="dom_header_desc">Conoce qué son los dominios y cómo funcionan en Internet.</p>
+    </section>
 
     <main class="contenido-tech">
 
         <section class="info-box">
-            <h2>¿Qué es un dominio?</h2>
-
-            <p>
-                Un dominio es el nombre que utilizamos para entrar a un sitio web
-                sin tener que recordar una dirección IP. Por ejemplo:
-                <strong>www.gamezone.com</strong>.
+            <h2 data-i18n="dom_que_es_tit">¿Qué es un dominio?</h2>
+            <p data-i18n="dom_que_es_desc">
+                Un dominio es el nombre que utilizamos para entrar a un sitio web sin tener que recordar una dirección IP. Por ejemplo: <strong>www.gamezone.com</strong>.
             </p>
         </section>
 
         <section class="info-box">
-            <h2>Tipos de dominios</h2>
+            <h2 data-i18n="dom_tipos_tit">Tipos de dominios</h2>
 
             <div class="conceptos-grid">
 
                 <div class="concepto">
                     <h3>.com</h3>
-                    <p>Se utiliza principalmente para sitios comerciales y empresas.</p>
+                    <p data-i18n="dom_com_desc">Se utiliza principalmente para sitios comerciales y empresas.</p>
                 </div>
 
                 <div class="concepto">
                     <h3>.org</h3>
-                    <p>Es común en organizaciones y proyectos sin fines comerciales.</p>
+                    <p data-i18n="dom_org_desc">Es común en organizaciones y proyectos sin fines comerciales.</p>
                 </div>
 
                 <div class="concepto">
                     <h3>.net</h3>
-                    <p>Originalmente relacionado con redes y servicios de Internet.</p>
+                    <p data-i18n="dom_net_desc">Originalmente relacionado con redes y servicios de Internet.</p>
                 </div>
 
             </div>
         </section>
 
         <section class="info-box">
-            <h2>¿Cómo funciona un dominio?</h2>
+            <h2 data-i18n="dom_func_tit">¿Cómo funciona un dominio?</h2>
 
             <div class="game-panel">
-                <h3>🌐 Proceso de conexión</h3>
+                <h3 data-i18n="dom_proc_tit">🌐 Proceso de conexión</h3>
 
-                <p>
+                <p data-i18n="dom_p1">
                     <strong>1. Dominio</strong> → El usuario escribe el nombre del sitio.
                 </p>
 
-                <p>
+                <p data-i18n="dom_p2">
                     <strong>2. DNS</strong> → Busca la dirección IP correspondiente.
                 </p>
 
-                <p>
+                <p data-i18n="dom_p3">
                     <strong>3. Servidor</strong> → Encuentra dónde está almacenado el sitio.
                 </p>
 
-                <p>
+                <p data-i18n="dom_p4">
                     <strong>4. Página web</strong> → El contenido se muestra en el navegador.
                 </p>
             </div>
         </section>
 
         <section class="info-box">
-            <h2>🔗 Ejemplo</h2>
+            <h2 data-i18n="dom_ejemplo_tit">🔗 Ejemplo</h2>
 
-            <p>
-                Si GameZone tuviera un dominio llamado
-                <strong>www.gamezone.com</strong>, los usuarios podrían escribirlo
-                en su navegador para acceder al sitio.
+            <p data-i18n="dom_ejemplo_desc">
+                Si GameZone tuviera un dominio llamado <strong>www.gamezone.com</strong>, los usuarios podrían escribirlo en su navegador para acceder al sitio.
             </p>
         </section>
 
         <section class="info-box">
-            <h2>📚 Fuente</h2>
+            <h2 data-i18n="dom_fuente_tit">📚 Fuente</h2>
 
-            <p>
-                Información consultada en recursos educativos sobre dominios,
-                DNS y funcionamiento de Internet.
+            <p data-i18n="dom_fuente_desc">
+                Información consultada en recursos educativos sobre dominios, DNS y funcionamiento de Internet.
             </p>
         </section>
 
     </main>
 
     <footer>
-        <p>© 2026 GameZone | Proyecto educativo</p>
+        <div class="logo">GAME<span>ZONE</span></div>
+        <p data-i18n="footer_texto">Proyecto educativo de desarrollo web © 2026</p>
     </footer>
 
     <script src="script.js"></script>

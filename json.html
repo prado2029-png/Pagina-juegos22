@@ -14,25 +14,31 @@
     <a href="index.html" class="logo">GAME<span>ZONE</span></a>
 
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="javascript.html">JavaScript</a>
-        <a href="jquery.html">jQuery</a>
-        <a href="json.html" class="activo">JSON</a>
-        <a href="hosting.html">Hosting</a>
-        <a href="dominios.html">Dominios</a>
-        <a href="cuestionario.html">Quiz</a>
-        <a href="recursos.html">Recursos</a>
+        <a href="index.html" data-i18n="nav_inicio">Inicio</a>
+        <a href="javascript.html" data-i18n="nav_js">JavaScript</a>
+        <a href="jquery.html" data-i18n="nav_jquery">jQuery</a>
+        <a href="json.html" class="activo" data-i18n="nav_json">JSON</a>
+        <a href="hosting.html" data-i18n="nav_hosting">Hosting</a>
+        <a href="dominios.html" data-i18n="nav_dominios">Dominios</a>
+        <a href="cuestionario.html" data-i18n="nav_quiz">Quiz</a>
+        <a href="recursos.html" data-i18n="nav_recursos">Recursos</a>
+        <a href="herramientas-google.html" data-i18n="nav_google">Google</a>
+        <a href="contactanos.html" data-i18n="nav_contacto">Contáctanos</a>
+
+        <!-- Botón de Idioma -->
+        <button id="btn-idioma" class="modo-btn" type="button" title="Cambiar idioma">🌐 <span id="btn-lang-text">EN</span></button>
+        <!-- Botón de Modo Oscuro -->
+        <button id="modoBtn" class="modo-btn" type="button">☀️</button>
     </nav>
 </header>
 
 <main>
 
 <section class="pagina-header">
-    <p class="etiqueta">DATA TECHNOLOGY</p>
+    <p class="etiqueta" data-i18n="json_header_etiqueta">DATA TECHNOLOGY</p>
     <h1>JSON <span>◆</span></h1>
-    <p>
-        Un formato utilizado para almacenar e intercambiar
-        información entre aplicaciones.
+    <p data-i18n="json_header_desc">
+        Un formato utilizado para almacenar e intercambiar información entre aplicaciones.
     </p>
 </section>
 
@@ -41,23 +47,21 @@
     <div class="info-box">
         <span class="numero">01</span>
 
-        <h2>¿Qué es JSON?</h2>
+        <h2 data-i18n="json_info_1_titulo">¿Qué es JSON?</h2>
 
-        <p>
-            JSON significa JavaScript Object Notation. Es un formato
-            ligero utilizado para representar y transportar datos.
+        <p data-i18n="json_info_1_p1">
+            JSON significa JavaScript Object Notation. Es un formato ligero utilizado para representar y transportar datos.
         </p>
 
-        <p>
-            Es muy utilizado en páginas web, aplicaciones y APIs
-            para enviar información entre clientes y servidores.
+        <p data-i18n="json_info_1_p2">
+            Es muy utilizado en páginas web, aplicaciones y APIs para enviar información entre clientes y servidores.
         </p>
     </div>
 
     <div class="info-box">
         <span class="numero">02</span>
 
-        <h2>Clave y valor</h2>
+        <h2 data-i18n="json_info_2_titulo">Clave y valor</h2>
 
         <div class="codigo">
 <pre><code>{
@@ -73,32 +77,32 @@
 <section class="seccion">
 
     <div class="titulo-seccion">
-        <p>ESTRUCTURA</p>
-        <h2>OBJETOS Y <span>ARREGLOS</span></h2>
+        <p data-i18n="json_seccion_etiqueta">ESTRUCTURA</p>
+        <h2><span data-i18n="json_seccion_tit_1">OBJETOS Y</span> <span data-i18n="json_seccion_tit_2">ARREGLOS</span></h2>
     </div>
 
     <div class="conceptos-grid">
 
         <div class="concepto">
             <span>01</span>
-            <h3>Objeto</h3>
-            <p>
+            <h3 data-i18n="json_c1_titulo">Objeto</h3>
+            <p data-i18n="json_c1_desc">
                 Contiene información mediante pares de clave y valor.
             </p>
         </div>
 
         <div class="concepto">
             <span>02</span>
-            <h3>Arreglo</h3>
-            <p>
+            <h3 data-i18n="json_c2_titulo">Arreglo</h3>
+            <p data-i18n="json_c2_desc">
                 Permite almacenar varios valores dentro de una lista.
             </p>
         </div>
 
         <div class="concepto">
             <span>03</span>
-            <h3>APIs</h3>
-            <p>
+            <h3 data-i18n="json_c3_titulo">APIs</h3>
+            <p data-i18n="json_c3_desc">
                 JSON permite intercambiar información entre aplicaciones.
             </p>
         </div>
@@ -110,13 +114,12 @@
 <section class="codigo-section">
 
     <div>
-        <p class="etiqueta">EJEMPLO GAMER</p>
+        <p class="etiqueta" data-i18n="json_codigo_etiqueta">EJEMPLO GAMER</p>
 
-        <h2>DATOS DE UN <span>VIDEOJUEGO</span></h2>
+        <h2><span data-i18n="json_codigo_tit_1">DATOS DE UN</span> <span data-i18n="json_codigo_tit_2">VIDEOJUEGO</span></h2>
 
-        <p>
-            Una aplicación podría utilizar JSON para recibir
-            información sobre videojuegos desde un servidor.
+        <p data-i18n="json_codigo_desc">
+            Una aplicación podría utilizar JSON para recibir información sobre videojuegos desde un servidor.
         </p>
     </div>
 
@@ -141,7 +144,7 @@
 
 <footer>
     <div class="logo">GAME<span>ZONE</span></div>
-    <p>GameZone © 2026</p>
+    <p data-i18n="footer_texto">GameZone © 2026</p>
 </footer>
 <script src="script.js"></script>
 

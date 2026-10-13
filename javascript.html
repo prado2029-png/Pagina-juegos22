@@ -1,301 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>GameZone | JavaScript</title>
-
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-
 <header class="navbar">
-
     <a href="index.html" class="logo">
         GAME<span>ZONE</span>
     </a>
 
     <nav>
+        <a href="index.html" data-i18n="nav_inicio">Inicio</a>
+        <a href="javascript.html" class="activo" data-i18n="nav_js">JavaScript</a>
+        <a href="jquery.html" data-i18n="nav_jquery">jQuery</a>
+        <a href="json.html" data-i18n="nav_json">JSON</a>
+        <a href="hosting.html" data-i18n="nav_hosting">Hosting</a>
+        <a href="dominios.html" data-i18n="nav_dominios">Dominios</a>
+        <a href="cuestionario.html" data-i18n="nav_quiz">Quiz</a>
+        <a href="recursos.html" data-i18n="nav_recursos">Recursos</a>
+        <a href="herramientas-google.html" data-i18n="nav_google">Google</a>
+        <a href="contactanos.html" data-i18n="nav_contacto">Contáctanos</a>
 
-        <a href="index.html">Inicio</a>
-
-        <a href="javascript.html" class="activo">
-            JavaScript
-        </a>
-
-        <a href="jquery.html">
-            jQuery
-        </a>
-
-        <a href="json.html">
-            JSON
-        </a>
-
-        <a href="hosting.html">
-            Hosting
-        </a>
-
-        <a href="dominios.html">
-            Dominios
-        </a>
-
-        <a href="cuestionario.html">
-            Quiz
-        </a>
-
-        <a href="recursos.html">
-            Recursos
-        </a>
-
-        <!-- BOTÓN DE MODO OSCURO AGREGADO -->
+        <!-- Botón de Idioma -->
+        <button id="btn-idioma" class="modo-btn" type="button" title="Cambiar idioma">🌐 <span id="btn-lang-text">EN</span></button>
+        <!-- Botón de Modo Oscuro -->
         <button id="modoBtn" class="modo-btn" type="button">☀️</button>
-
     </nav>
-
 </header>
-
 
 <main>
 
-
     <!-- ENCABEZADO -->
-
     <section class="pagina-header">
-
-        <p class="etiqueta">
-            WEB TECHNOLOGY
-        </p>
-
+        <p class="etiqueta" data-i18n="js_header_etiqueta">WEB TECHNOLOGY</p>
         <h1>
-            JAVASCRIPT
-            <span>⚡</span>
+            JAVASCRIPT <span>⚡</span>
         </h1>
-
-        <p>
-            El lenguaje que agrega interacción y comportamiento
-            a las páginas web.
+        <p data-i18n="js_header_desc">
+            El lenguaje que agrega interacción y comportamiento a las páginas web.
         </p>
-
     </section>
-
 
     <!-- INFORMACIÓN -->
-
     <section class="contenido-tech">
-
         <div class="info-box">
-
-            <span class="numero">
-                01
-            </span>
-
-            <h2>
-                ¿Qué es JavaScript?
-            </h2>
-
-            <p>
-                JavaScript es un lenguaje de programación utilizado
-                principalmente para crear páginas web interactivas.
+            <span class="numero">01</span>
+            <h2 data-i18n="js_info_1_titulo">¿Qué es JavaScript?</h2>
+            <p data-i18n="js_info_1_p1">
+                JavaScript es un lenguaje de programación utilizado principalmente para crear páginas web interactivas.
             </p>
-
-            <p>
-                Permite responder a las acciones del usuario,
-                modificar contenido, crear animaciones y agregar
-                diferentes funcionalidades.
+            <p data-i18n="js_info_1_p2">
+                Permite responder a las acciones del usuario, modificar contenido, crear animaciones y agregar diferentes funcionalidades.
             </p>
-
         </div>
 
-
         <div class="info-box">
-
-            <span class="numero">
-                02
-            </span>
-
-            <h2>
-                HTML + CSS + JS
-            </h2>
-
+            <span class="numero">02</span>
+            <h2>HTML + CSS + JS</h2>
             <div class="tech-comparison">
-
                 <div>
                     <strong>HTML</strong>
-                    <p>Estructura</p>
+                    <p data-i18n="js_comp_html">Estructura</p>
                 </div>
-
                 <div>
                     <strong>CSS</strong>
-                    <p>Diseño</p>
+                    <p data-i18n="js_comp_css">Diseño</p>
                 </div>
-
                 <div>
                     <strong>JS</strong>
-                    <p>Comportamiento</p>
+                    <p data-i18n="js_comp_js">Comportamiento</p>
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
 
     <!-- CONCEPTOS -->
-
     <section class="seccion">
-
         <div class="titulo-seccion">
-
-            <p>FUNDAMENTOS</p>
-
+            <p data-i18n="js_conceptos_etiqueta">FUNDAMENTOS</p>
             <h2>
-                CONCEPTOS <span>BÁSICOS</span>
+                <span data-i18n="js_conceptos_tit_1">CONCEPTOS</span> <span data-i18n="js_conceptos_tit_2">BÁSICOS</span>
             </h2>
-
         </div>
-
 
         <div class="conceptos-grid">
-
             <div class="concepto">
-
                 <span>01</span>
-
-                <h3>Variables</h3>
-
-                <p>
-                    Permiten almacenar información que puede
-                    utilizarse durante la ejecución del programa.
+                <h3 data-i18n="js_c1_titulo">Variables</h3>
+                <p data-i18n="js_c1_desc">
+                    Permiten almacenar información que puede utilizarse durante la ejecución del programa.
                 </p>
-
             </div>
 
-
             <div class="concepto">
-
                 <span>02</span>
-
-                <h3>Funciones</h3>
-
-                <p>
-                    Son bloques de código que realizan una
-                    tarea específica.
+                <h3 data-i18n="js_c2_titulo">Funciones</h3>
+                <p data-i18n="js_c2_desc">
+                    Son bloques de código que realizan una tarea específica.
                 </p>
-
             </div>
-
 
             <div class="concepto">
-
                 <span>03</span>
-
-                <h3>Eventos</h3>
-
-                <p>
-                    Permiten ejecutar código cuando ocurre una
-                    acción como hacer click.
+                <h3 data-i18n="js_c3_titulo">Eventos</h3>
+                <p data-i18n="js_c3_desc">
+                    Permiten ejecutar código cuando ocurre una acción como hacer click.
                 </p>
-
             </div>
-
         </div>
-
     </section>
-
 
     <!-- CÓDIGO -->
-
     <section class="codigo-section">
-
         <div>
-
-            <p class="etiqueta">
-                EJEMPLO PRÁCTICO
-            </p>
-
+            <p class="etiqueta" data-i18n="js_codigo_etiqueta">EJEMPLO PRÁCTICO</p>
             <h2>
-                JAVASCRIPT EN
-                <span>ACCIÓN</span>
+                <span data-i18n="js_codigo_tit_1">JAVASCRIPT EN</span> <span>ACCIÓN</span>
             </h2>
-
-            <p>
-                En este ejemplo, JavaScript responde al botón
-                y muestra un mensaje al usuario.
+            <p data-i18n="js_codigo_desc">
+                En este ejemplo, JavaScript responde al botón y muestra un mensaje al usuario.
             </p>
-
         </div>
-
 
         <div class="codigo">
-
             <div class="codigo-top">
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </div>
-
 <pre><code>
 function iniciarJuego() {
-
     alert("¡El juego ha comenzado!");
-
 }
 </code></pre>
-
         </div>
-
     </section>
-
 
     <!-- DEMOSTRACIÓN -->
-
     <section class="demo">
-
-        <h2>
-            PRUÉBALO
-        </h2>
-
-        <p>
+        <h2 data-i18n="js_demo_tit">PRUÉBALO</h2>
+        <p data-i18n="js_demo_desc">
             Presiona el botón para ejecutar JavaScript.
         </p>
-
-        <button
-            class="btn principal"
-            onclick="iniciarJuego()">
-
+        <button class="btn principal" onclick="iniciarJuego()" data-i18n="js_btn_iniciar">
             ▶ INICIAR JUEGO
-
         </button>
-
     </section>
-
 
 </main>
 
-
 <footer>
-
     <div class="logo">
         GAME<span>ZONE</span>
     </div>
-
-    <p>
-        GameZone © 2026
+    <p data-i18n="footer_texto">
+        Proyecto educativo de desarrollo web © 2026
     </p>
-
 </footer>
 
 <!-- LLAMADA A TU ARCHIVO SCRIPT PRINCIPAL -->
