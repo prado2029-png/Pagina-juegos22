@@ -2,8 +2,8 @@
 
 Estudiante: (Oscar Leonel Menjivar Prado).
 Fecha: (Viernes 16/10/2026).
-Enlace al Sitio Web (Vercel): (Aquí pega el enlace de tu página publicada en Vercel).
-Repositorio GitHub: https://github.com/prado2029-png/Pagina-Gamezone
+Enlace al Sitio Web (Vercel): https://pagina-juegos22-bvbh.vercel.app/
+Repositorio GitHub: https://github.com/prado2029-png/Pagina-juegos22
 
 ---
 
@@ -137,22 +137,19 @@ Funcionamiento técnico:
 🟢 Anexo 5: Estructura del Repositorio en GitHub
 
 ### Repositorio
-![Repositorio](assets/cuestionario.png)
-
-
-(Aquí coloca una captura de la página principal de tu repositorio público de GitHub. Deben verse los archivos y las carpetas del proyecto, incluyendo "index.html", "css", "js", "assets" y "README.md", según la estructura real de tu repositorio).
+![Repositorio](assets/Estructura1.png)
+![Repositorio](assets/Estructura2.png)
 
 ---
 
 5. Conclusiones y Autoevaluación
 
-- Desafíos enfrentados: Durante el desarrollo de GameZone fue necesario organizar las páginas, mantener un diseño visual uniforme e implementar elementos interactivos. También fue importante comprobar el funcionamiento del formulario, la integración con Discord y el cuestionario.
+- Desafíos enfrentados:Cuando fui creando el proyecto me enfrenté a algunas cosas complicas como hacer el formulario y que llegue al mensaje a dsicord, que la pagina cambie de oscuro a claro  y encontar algunos errores de por qué algo no funcionaba.
 
-- Aprendizajes clave: Este proyecto me permitió practicar HTML, CSS y JavaScript, conocer las ventajas de jQuery, comprender la estructura de JSON y aprender sobre hosting, dominios y publicación con Vercel. Además, practiqué la documentación de proyectos mediante Markdown y el uso de GitHub para organizar el código.
+- Aprendizajes clave: Aprendí un poco sobre hacer el formulario y que llegue el mensaje a discord porq no me ha quedado claro, hacer el readme porque es primera vez que lo hago y veo, y por ultimo he aprendido un poco sobre Javascript, json, yquery, etc.
 
-(Aquí puedes añadir una dificultad concreta que hayas tenido personalmente y cómo la resolviste, si quieres que la autoevaluación refleje mejor tu experiencia).
+(Me tardé 3 horas en buscar de como hacer para que el mensaje del formulario llegue a discord pero lo logré al final).
 
 ---
 
-GameZone | Gaming & Web
-Videojuegos, tecnología y aprendizaje web.
+GameZone.
