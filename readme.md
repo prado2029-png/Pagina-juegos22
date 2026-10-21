@@ -3,7 +3,7 @@
 Estudiante: (Oscar Leonel Menjivar Prado).
 Fecha: (Viernes 16/10/2026).
 Enlace al Sitio Web (Vercel): https://pagina-juegos22-bvbh.vercel.app/
-Repositorio GitHub: https://github.com/prado2029-png/Pagina-juegos22
+Repositorio GitHub: https://github.com/ prado2029-png/Pagina-juegos22
 
 ---
 
@@ -100,8 +100,6 @@ Funcionamiento técnico:
 3. Los datos se envían al servicio configurado para la integración con Discord.
 4. Cuando el envío se realiza correctamente, aparece una notificación en el canal de Discord correspondiente.
 
-(Esta explicación debe coincidir con el funcionamiento real de tu formulario. Si tu página utiliza otro procedimiento, modifica los pasos para describirlo correctamente).
-
 ---
 
 4. Anexos y Evidencias Gráficas
@@ -118,7 +116,7 @@ Funcionamiento técnico:
 
 🟢 Anexo 2: Despliegue Exitoso en Vercel
 ### Vercel
-![Despliegue en vercel](assets/despliegue_vercel.png)
+![Despliegue en vercel](assets/despliegue%20en%20vercel.png)
 
 
 
@@ -127,11 +125,10 @@ Funcionamiento técnico:
 ### Vercel
 ![Vista móvil](assets/vista_cel.jpeg)
 
-
 🟢 Anexo 4: Cuestionario Interactivo en Funcionamiento
 
 ### Cuestionario
-![Cuestionario](assets/cuestionario.png)
+![Cuestionario](assets/quiz.png)
 
 
 🟢 Anexo 5: Estructura del Repositorio en GitHub
