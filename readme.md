@@ -134,8 +134,8 @@ Funcionamiento técnico:
 🟢 Anexo 5: Estructura del Repositorio en GitHub
 
 ### Repositorio
-![Repositorio](assets/Estructura1.png)
-![Repositorio](assets/Estructura2.png)
+![Repositorio](assets/e1.png)
+![Repositorio](assets/e2.png)
 
 ---
 
