@@ -135,6 +135,7 @@ Funcionamiento técnico:
 
 ### Repositorio
 ![Repositorio](assets/e1.png)
+
 ![Repositorio](assets/e2.png)
 
 ---
