@@ -2,8 +2,8 @@
 
 Estudiante: (Oscar Leonel Menjivar Prado).
 Fecha: (Viernes 16/10/2026).
-Enlace al Sitio Web (Vercel): https://pagina-juegos22-bvbh.vercel.app/
-Repositorio GitHub: https://github.com/ prado2029-png/Pagina-juegos22
+Enlace al Sitio Web (Vercel): https://pagina-juegos22-674t.vercel.app/
+Repositorio GitHub: 
 
 ---
 
@@ -37,7 +37,7 @@ El carrusel de la página principal presenta imágenes de diferentes videojuegos
 
 ### Evidencia del carrusel
 
-![Carrusel de juegos de GameZone](assets/carrusel1.png)
+![Carrusel de juegos de GameZone](assets/carrusel.png)
 
 
 ---
@@ -100,6 +100,8 @@ Funcionamiento técnico:
 3. Los datos se envían al servicio configurado para la integración con Discord.
 4. Cuando el envío se realiza correctamente, aparece una notificación en el canal de Discord correspondiente.
 
+(Esta explicación debe coincidir con el funcionamiento real de tu formulario. Si tu página utiliza otro procedimiento, modifica los pasos para describirlo correctamente).
+
 ---
 
 4. Anexos y Evidencias Gráficas
@@ -116,14 +118,15 @@ Funcionamiento técnico:
 
 🟢 Anexo 2: Despliegue Exitoso en Vercel
 ### Vercel
-![Despliegue en vercel](assets/despliegue%20en%20vercel.png)
+![Despliegue en vercel](assets/despliegue-vercel.png)
 
 
 
 🟢 Anexo 3: Diseño Responsive y Bootstrap
 
 ### Vercel
-![Vista móvil](assets/vista_cel.jpeg)
+![Vista móvil](assets/vista-cel.jpeg)
+
 
 🟢 Anexo 4: Cuestionario Interactivo en Funcionamiento
 
@@ -135,7 +138,6 @@ Funcionamiento técnico:
 
 ### Repositorio
 ![Repositorio](assets/e1.png)
-
 ![Repositorio](assets/e2.png)
 
 ---
