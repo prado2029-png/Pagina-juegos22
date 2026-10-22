@@ -1,9 +1,9 @@
 🚀 Portafolio de Proyecto Web: GameZone | Gaming & Web
 
 Estudiante: (Oscar Leonel Menjivar Prado).
-Fecha: (Viernes 16/10/2026).
-Enlace al Sitio Web (Vercel): https://pagina-juegos22-674t.vercel.app/
-Repositorio GitHub: 
+Fecha: (Viernes 23/10/2026).
+Enlace al Sitio Web (Vercel): https://pagina-juegos22-7yye.vercel.app/
+Repositorio GitHub: https://github.com/prado2029-png/Pagina-juegos22
 
 ---
 
@@ -14,7 +14,7 @@ Repositorio GitHub:
 - Nombre Comercial: GameZone.
 - Descripción: GameZone es un sitio web interactivo dedicado al mundo de los videojuegos y al aprendizaje de conceptos relacionados con el desarrollo web. Presenta videojuegos, información educativa y herramientas interactivas.
 - Público Objetivo: Personas interesadas en los videojuegos, la tecnología y el desarrollo web.
-- Propuesta de Valor: Reunir contenido sobre videojuegos e información educativa de tecnologías web en un sitio visual, organizado e interactivo.
+- Propuesta de Valor: Reunir contenido sobre videojuegos e información educativa de tecnologías web en un sitio visual organizado e interactivo.
 
 🎨 Diseño Visual
 ### Logotipo
