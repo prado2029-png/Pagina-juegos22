@@ -23,7 +23,7 @@ function iniciarJuego() {
 // 1. Aplicar el modo guardado INMEDIATAMENTE al cargar el script
 const modoGuardado = localStorage.getItem("modo");
 
-if (modoGuardado === "claro") {
+if (modoGuardado === "oscuro") {
     document.body.classList.add("modo-claro");
 } else {
     document.body.classList.remove("modo-claro");
@@ -35,23 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (modoBtn) {
         // Ajustar el icono inicial según el modo cargado
-        if (document.body.classList.contains("modo-claro")) {
-            modoBtn.textContent = "🌙";
-        } else {
-            modoBtn.textContent = "☀️";
-        }
+        const actualizarIconoModo = () => {
+            const modoOscuro = document.body.classList.contains("modo-claro");
+            modoBtn.textContent = modoOscuro ? "☀️" : "🌙";
+            modoBtn.setAttribute("aria-label", modoOscuro ? "Activar modo claro" : "Activar modo oscuro");
+            modoBtn.title = modoBtn.getAttribute("aria-label");
+        };
+
+        actualizarIconoModo();
 
         // Listener del botón para alternar modos
         modoBtn.addEventListener("click", () => {
             document.body.classList.toggle("modo-claro");
-
-            if (document.body.classList.contains("modo-claro")) {
-                modoBtn.textContent = "🌙";
-                localStorage.setItem("modo", "claro");
-            } else {
-                modoBtn.textContent = "☀️";
-                localStorage.setItem("modo", "oscuro");
-            }
+            localStorage.setItem(
+                "modo",
+                document.body.classList.contains("modo-claro") ? "oscuro" : "claro"
+            );
+            actualizarIconoModo();
         });
     }
 });
@@ -79,12 +79,12 @@ const traducciones = {
     footer_texto: "Proyecto educativo de desarrollo web © 2026",
 
     // --- Página de Inicio (index.html) ---
-    hero_etiqueta: "🎮 GAMING & TECHNOLOGY",
-    hero_titulo_1: "EL MUNDO DE LOS",
-    hero_titulo_2: "VIDEOJUEGOS",
-    hero_texto: "Descubre videojuegos, tecnología y conceptos de desarrollo web en un solo lugar.",
-    btn_explorar: "Explorar juegos",
-    btn_aprender: "Aprender",
+    hero_etiqueta: "JUEGA. EXPLORA. APRENDE.",
+    hero_titulo_1: "Historias que cobran vida.",
+    hero_titulo_2: "Elige tu próxima aventura.",
+    hero_texto: "Recorre algunos de tus juegos favoritos y descubre cómo se construye la web.",
+    btn_explorar: "Ver juegos",
+    btn_aprender: "Explorar tecnologías",
     seccion_destacados: "DESTACADOS",
     titulo_juegos_1: "JUEGOS",
     titulo_juegos_2: "POPULARES",
@@ -94,7 +94,7 @@ const traducciones = {
     desc_gta: "Un mundo abierto lleno de acción, vehículos y aventuras.",
     desc_minecraft: "Explora, construye y crea tu propio mundo utilizando bloques.",
     desc_fc: "Vive la experiencia del fútbol y compite con tus equipos favoritos.",
-    btn_ver_mas: "Ver más →",
+    btn_ver_mas: "Ver en carrusel →",
     sobre_etiqueta: "SOBRE EL PROYECTO",
     sobre_titulo_1: "MÁS QUE UNA",
     sobre_titulo_2: "PÁGINA GAMER",
@@ -299,12 +299,12 @@ const traducciones = {
     footer_texto: "Web development educational project © 2026",
 
     // --- Home Page (index.html) ---
-    hero_etiqueta: "🎮 GAMING & TECHNOLOGY",
-    hero_titulo_1: "THE WORLD OF",
-    hero_titulo_2: "VIDEO GAMES",
-    hero_texto: "Discover video games, technology, and web development concepts in one place.",
-    btn_explorar: "Explore games",
-    btn_aprender: "Learn",
+    hero_etiqueta: "PLAY. EXPLORE. LEARN.",
+    hero_titulo_1: "Stories that come to life.",
+    hero_titulo_2: "Choose your next adventure.",
+    hero_texto: "Take a look at some favorite games and discover how the web is built.",
+    btn_explorar: "Browse games",
+    btn_aprender: "Explore web tech",
     seccion_destacados: "FEATURED",
     titulo_juegos_1: "POPULAR",
     titulo_juegos_2: "GAMES",
@@ -314,7 +314,7 @@ const traducciones = {
     desc_gta: "An open world full of action, vehicles, and adventures.",
     desc_minecraft: "Explore, build, and create your own world using blocks.",
     desc_fc: "Live the football experience and compete with your favorite teams.",
-    btn_ver_mas: "See more →",
+    btn_ver_mas: "View in carousel →",
     sobre_etiqueta: "ABOUT THE PROJECT",
     sobre_titulo_1: "MORE THAN A",
     sobre_titulo_2: "GAMER PAGE",
@@ -539,87 +539,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ===============================
-// ANIMACIÓN AL CARGAR PÁGINAS
+// TARJETAS DE JUEGOS
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
+    const carrusel = document.getElementById("gameCarousel");
 
-    const elementos = document.querySelectorAll(
-        ".hero, #gameCarousel, .seccion, .juego-card, .sobre, .paleta, .google-card, .contacto-container, .info-box, .concepto"
-    );
+    document.querySelectorAll("[data-game-slide]").forEach((boton) => {
+        boton.addEventListener("click", () => {
+            const indice = Number(boton.dataset.gameSlide);
+            const diapositivas = carrusel?.querySelectorAll(".carousel-item");
 
-    elementos.forEach((elemento, index) => {
+            if (!carrusel || !diapositivas || !diapositivas[indice]) {
+                return;
+            }
 
-        elemento.style.opacity = "0";
-        elemento.style.transform = "translateY(25px)";
+            if (window.bootstrap?.Carousel) {
+                const instancia = window.bootstrap.Carousel.getOrCreateInstance(carrusel);
+                instancia.pause();
+                instancia.to(indice);
+            } else {
+                diapositivas.forEach((diapositiva, posicion) => {
+                    diapositiva.classList.toggle("active", posicion === indice);
+                });
+            }
 
-        setTimeout(() => {
-
-            elemento.style.transition =
-                "opacity 0.6s ease, transform 0.6s ease";
-
-            elemento.style.opacity = "1";
-            elemento.style.transform = "translateY(0)";
-
-        }, 100 + (index * 80));
-
+            carrusel.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
     });
-
-});
-
-
-// ===============================
-// TRANSICIÓN ENTRE PÁGINAS
-// ===============================
-
-document.querySelectorAll("a").forEach((enlace) => {
-
-    enlace.addEventListener("click", function (e) {
-
-        const destino = this.href;
-
-        if (
-            !destino ||
-            destino.includes("#") ||
-            this.target === "_blank"
-        ) {
-            return;
-        }
-
-        if (destino.includes(".html")) {
-
-            e.preventDefault();
-
-            document.body.style.transition =
-                "opacity 0.3s ease";
-
-            document.body.style.opacity = "0";
-
-            setTimeout(() => {
-                window.location.href = destino;
-            }, 300);
-
-        }
-
-    });
-
-});
-
-
-// ===============================
-// EFECTO DE ELEVACIÓN EN TARJETAS
-// ===============================
-
-document.querySelectorAll(".juego-card, .google-card").forEach((tarjeta) => {
-
-    tarjeta.addEventListener("mouseenter", () => {
-        tarjeta.style.transform = "translateY(-8px)";
-    });
-
-    tarjeta.addEventListener("mouseleave", () => {
-        tarjeta.style.transform = "translateY(0)";
-    });
-
 });
 
 
