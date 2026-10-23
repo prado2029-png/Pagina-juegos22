@@ -2,6 +2,8 @@
 
 Estudiante: (Oscar Leonel Menjivar Prado).
 Fecha: (Viernes 22/10/2026).
+Enlace del sitio bew: https://pagina-juegos22-pqjj.vercel.app/
+Enlace del repositorio: https://github.com/prado2029-png/Pagina-juegos22
 
 ---
 
