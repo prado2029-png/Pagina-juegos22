@@ -1,9 +1,7 @@
 🚀 Portafolio de Proyecto Web: GameZone | Gaming & Web
 
 Estudiante: (Oscar Leonel Menjivar Prado).
-Fecha: (Viernes 23/10/2026).
-Enlace al Sitio Web (Vercel): https://pagina-juegos22-7yye.vercel.app/
-Repositorio GitHub: https://github.com/prado2029-png/Pagina-juegos22
+Fecha: (Viernes 22/10/2026).
 
 ---
 
@@ -117,14 +115,14 @@ Funcionamiento técnico:
 
 
 🟢 Anexo 2: Despliegue Exitoso en Vercel
-### Vercel
+### Despliegue en Vercel
 ![Despliegue en vercel](assets/despliegue-vercel.png)
 
 
 
 🟢 Anexo 3: Diseño Responsive y Bootstrap
 
-### Vercel
+### Vista Móvil
 ![Vista móvil](assets/vista-cel.jpeg)
 
 
